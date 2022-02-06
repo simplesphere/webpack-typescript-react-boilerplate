@@ -1,0 +1,25 @@
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "plugins": [
+    ["@babel/plugin-transform-runtime", { "regenerator": true }],
+    [
+      "module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          "@/svg": "./src/svg",
+          "@/utils": "./src/utils",
+          "@/hooks": "./src/hooks",
+          "@/doc": "./src/doc",
+          "@/config": "./config",
+          "@/styles": "./src/assets/styles",
+          "@/fonts": "./src/assets/fonts",
+          "@/components": "./src/components",
+          "@/SVGIcons": "./src/SVGIcons",
+          "@/base": "./src",
+          "@/assets": "./src/assets"
+        }
+      }
+    ]
+  ]
+}
