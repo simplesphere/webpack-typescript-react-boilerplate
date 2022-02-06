@@ -6,6 +6,7 @@
   "scripts": {
     "start:dev": "NODE_ENV=development webpack-dev-server --mode development --config ./config/webpack/webpack.config.js --progress",
     "build": "webpack --mode production",
+    "test": "",
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --fix",
     "prepare": "husky install"
   },
@@ -49,7 +50,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "html-webpack-plugin": "^5.5.0",
-    "husky": "^7.0.4",
+    "husky": "^7.0.0",
     "lint-staged": "^12.3.3",
     "mini-css-extract-plugin": "^2.5.3",
     "postcss-loader": "^6.2.1",
