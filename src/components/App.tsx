@@ -73,7 +73,8 @@ const App: React.FC = () => (
                   cillum dolore eu fugiat nulla pariatur.
                 </p>
                 <a
-                  href="#"
+                  href="/#"
+                  onClick={(e) => e.preventDefault()}
                   className="mt-3 text-indigo-500 inline-flex items-center"
                 >
                   Learn More
@@ -119,7 +120,8 @@ const App: React.FC = () => (
                   cillum dolore eu fugiat nulla pariatur.
                 </p>
                 <a
-                  href="#"
+                  href="/#"
+                  onClick={(e) => e.preventDefault()}
                   className="mt-3 text-indigo-500 inline-flex items-center"
                 >
                   Learn More
@@ -166,7 +168,8 @@ const App: React.FC = () => (
                   cillum dolore eu fugiat nulla pariatur.
                 </p>
                 <a
-                  href="#"
+                  href="/#"
+                  onClick={(e) => e.preventDefault()}
                   className="mt-3 text-indigo-500 inline-flex items-center"
                 >
                   Learn More

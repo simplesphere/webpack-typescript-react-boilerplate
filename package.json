@@ -7,7 +7,7 @@
     "start:dev": "NODE_ENV=development webpack-dev-server --mode development --config ./config/webpack/webpack.config.js --progress",
     "build": "webpack --mode production",
     "test": "",
-    "lint": "eslint \"./src/**/*.{ts,tsx}\" --fix",
+    "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
     "prepare": "husky install"
   },
   "repository": {
@@ -47,6 +47,7 @@
     "css-loader": "^6.6.0",
     "eslint": "^8.8.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "html-webpack-plugin": "^5.5.0",
