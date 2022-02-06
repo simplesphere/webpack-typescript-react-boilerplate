@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ESNext",
+    "module": "es6",
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "jsx": "react",
+    "moduleResolution": "Node",
+    "strict": true,
+    "noEmit": true,
+    "removeComments": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@/*": ["src/"],
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"]
+    },
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
+  },
+  "include": ["./src/**/*"]
+}

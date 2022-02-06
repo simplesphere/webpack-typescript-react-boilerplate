@@ -1,5 +1,5 @@
 import React from 'react';
-import placeholderImg from '../assets/img/placeholder.png';
+import placeholderImg from '@assets/img/placeholder.png';
 
 const App: React.FC = () => {
   return (
@@ -55,9 +55,9 @@ const App: React.FC = () => {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       className="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -81,9 +81,9 @@ const App: React.FC = () => {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       className="w-4 h-4 ml-2"
                       viewBox="0 0 24 24"
                     >
@@ -100,9 +100,9 @@ const App: React.FC = () => {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       className="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -127,9 +127,9 @@ const App: React.FC = () => {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       className="w-4 h-4 ml-2"
                       viewBox="0 0 24 24"
                     >
@@ -146,9 +146,9 @@ const App: React.FC = () => {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       className="w-5 h-5"
                       viewBox="0 0 24 24"
                     >
@@ -174,9 +174,9 @@ const App: React.FC = () => {
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       className="w-4 h-4 ml-2"
                       viewBox="0 0 24 24"
                     >

@@ -1,37 +1,33 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
 
 const isEnvDev = process.env.NODE_ENV === 'development';
-const rootDir = '../../';
+const rootDir = '../..';
 
 module.exports = {
-  entry: path.resolve(__dirname, rootDir, 'src/index.tsx'),
+  entry: path.resolve(__dirname, rootDir, '/src/index.tsx'),
   output: {
     path: path.resolve(__dirname, rootDir, 'dist'),
     filename: isEnvDev ? 'js/[name].js' : 'js/[name].[contenthash].js',
   },
   plugins: [
     new HTMLWebpackPlugin({
-      template: path.resolve(__dirname, rootDir, 'src/index.html'),
+      template: path.resolve(__dirname, rootDir, '/src/index.html'),
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
   ],
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.jsx', '.js'],
+    plugins: [new TsconfigPathsPlugin()],
   },
   module: {
     rules: [
       {
         test: /\.[jt]sx?$/,
-        resolve: {
-          extensions: ['.js', '.jsx', '.ts', '.tsx'],
-          alias: {
-            '@': path.resolve(__dirname, './src'),
-          },
-        },
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
