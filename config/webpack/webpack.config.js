@@ -1,16 +1,23 @@
-const path = require('path');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
+const path = require('path')
+const HTMLWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin')
 
-const isEnvDev = process.env.NODE_ENV === 'development';
-const rootDir = '../..';
+const isEnvDev = process.env.NODE_ENV === 'development'
+const rootDir = '../..'
 
 module.exports = {
   entry: path.resolve(__dirname, rootDir, '/src/index.tsx'),
   output: {
     path: path.resolve(__dirname, rootDir, 'dist'),
     filename: isEnvDev ? 'js/[name].js' : 'js/[name].[contenthash].js',
+  },
+  devServer: {
+    historyApiFallback: true,
+    host: 'localhost',
+    liveReload: false,
+    port: 8080,
   },
   plugins: [
     new HTMLWebpackPlugin({
@@ -19,6 +26,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
+    new ReactRefreshPlugin(),
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
@@ -54,4 +62,4 @@ module.exports = {
       },
     ],
   },
-};
+}
