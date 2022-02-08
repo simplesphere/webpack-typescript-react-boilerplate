@@ -1,9 +1,13 @@
 const paths = require('./paths')
 const TerserPlugin = require('terser-webpack-plugin')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const BundleAnalyzerPlugin =
+  require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = {
   mode: 'production',
-  devtool: 'source-map',
+  devtool: false,
+  plugins: [new BundleAnalyzerPlugin()],
   output: {
     path: paths.outputPath,
     filename: './assets/js/[name].[contenthash:8].js',
@@ -47,6 +51,7 @@ module.exports = {
           },
         },
       }),
+      new CssMinimizerPlugin(),
     ],
   },
 }

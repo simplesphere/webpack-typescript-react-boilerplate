@@ -43,6 +43,19 @@ module.exports = {
   plugins: [
     new HTMLWebpackPlugin({
       template: paths.templatePath,
+      title: 'Boilerplate for react / ts projects (not CRA)',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true,
+      },
     }),
     new MiniCssExtractPlugin({
       filename: 'assets/css/[name].css',
